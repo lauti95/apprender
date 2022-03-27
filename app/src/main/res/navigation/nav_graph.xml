@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navCurso">
+
+    <fragment
+        android:id="@+id/navCurso"
+        android:name="com.example.firebaselogin.fragments.CursoFragment"
+        android:label="Curso"
+        tools:layout="@layout/curso_fragment" />
+    <fragment
+        android:id="@+id/navReporte"
+        android:name="com.example.firebaselogin.fragments.ReportFragment"
+        android:label="Reporte"
+        tools:layout="@layout/report_fragment" />
+    <fragment
+        android:id="@+id/navAcercaDe"
+        android:name="com.example.firebaselogin.fragments.AcercaDeFragment"
+        android:label="Acerca de"
+        tools:layout="@layout/acerca_de_fragment" />
+    <activity
+        android:id="@+id/navPerfil"
+        android:name="com.example.firebaselogin.MainActivity"
+        android:label="Mi perfil"
+        tools:layout="@layout/activity_main" />
+</navigation>

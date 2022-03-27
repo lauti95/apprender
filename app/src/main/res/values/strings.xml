@@ -1,0 +1,40 @@
+<resources>
+    <string name="nombre_app">Apprender</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="registrarse_login">No tienes una cuenta? <b>Registrarse</b></string>
+    <string name="bienvenido">Bienvenido!</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="email">Email</string>
+    <string name="confirmar_contraseña">Confirmar contraseña</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="rol">Rol</string>
+    <string name="login_google">Ingresa usando Google</string>
+    <string name="editar_perfil">Editar perfil</string>
+    <string name="guardar_cambios">Guardar cambios</string>
+    <string name="eliminar_cuenta">Eliminar cuenta</string>
+    <string name="curso">Curso</string>
+    <string name="materia">Materia</string>
+    <string name="usuario">Usuario</string>
+    <string name="escuela">Escuela</string>
+    <string name="cambiar_contraseña">CAMBIAR CONTRASEÑA</string>
+    <string name="contraseña_actual">Contraseña actual</string>
+    <string name="contraseña_nueva">Contraseña nueva</string>
+    <string name="olvidaste_tu_contraseña">Olvidaste tu contraseña?</string>
+    <string name="ingresar_correo">Ingrese su correo electrónico</string>
+    <string name="recuperar_contraseña">RECUPERAR CONTRASEÑA</string>
+    <string name="enviar_codigo">Enviar código</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="jorge_reyes">Jorge Reyes</string>
+    <string name="lautaro_negri">Lautaro Negri</string>
+    <string name="creado_por">Creado por:</string>
+    <string name="contacto">Contacto:</string>
+    <string name="mail_lautaro">lautaro.negri@gmail.com</string>
+    <string name="celular_lautaro">+(54)1133500700</string>
+    <string-array name="lista_roles">
+        <item>Alumno/a</item>
+        <item>Profesor/a</item>
+    </string-array>
+</resources>

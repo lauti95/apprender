@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/navCurso"
+        android:icon="@drawable/aula"
+        android:title="Curso" />
+    <item android:title="Mi cuenta">
+        <menu>
+            <item
+                android:id="@+id/navPerfil"
+                android:icon="@drawable/perfil"
+                android:title="Mi perfil" />
+        </menu>
+    </item>
+    <item android:title="Reportes">
+        <menu>
+            <item
+                android:id="@+id/navReporte"
+                android:icon="@drawable/report"
+                android:title="Reportes" />
+        </menu>
+    </item>
+    <item android:title="Acerca de" >
+        <menu >
+            <item
+                android:id="@+id/navAcercaDe"
+                android:icon="@drawable/acercade"
+                android:title="Acerca de" />
+            <item
+                android:id="@+id/navPolíticasPriv"
+                android:title="Políticas de privacidad" />
+            <item
+                android:id="@+id/navRecomiéndanos"
+                android:title="Recomiéndanos" />
+            <item
+                android:id="@+id/navCalifícanos"
+                android:title="Califícanos" />
+        </menu>
+    </item>
+</menu>
