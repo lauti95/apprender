@@ -20,13 +20,9 @@ class Registro : AppCompatActivity() {
     private var db = FirebaseFirestore.getInstance()
     private var email = ""
     private var contraseña = ""
-    private var repetirContraseña = ""
-    private var name = ""
+    private var confirmarContraseña = ""
+    private var nombre = ""
     private var apellido = ""
-    private var curso = ""
-    private var materia = ""
-    private var escuela = ""
-    private var rol = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistroBinding.inflate(layoutInflater)
@@ -40,47 +36,31 @@ class Registro : AppCompatActivity() {
         progressDialog.setMessage("Registrando...")
         progressDialog.setCanceledOnTouchOutside(false)
         firebaseAuth = FirebaseAuth.getInstance()
-        val spinner: Spinner = binding.spRollRegister
-        ArrayAdapter.createFromResource(this, R.array.lista_roles, android.R.layout.simple_spinner_item)
-            .also{ adapter->
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-                spinner.adapter = adapter
-        }
-        binding.btnRegister.setOnClickListener{
+        binding.btRegistrarse.setOnClickListener{
             validacionUser()
         }
     }
-
     private fun validacionUser() {
-        email = binding.etEmailRegister.text.toString().trim()
-        contraseña = binding.etPwdRegister.text.toString().trim()
-        repetirContraseña = binding.etPwdConfirm.text.toString().trim()
-        name = binding.etNameRegister.text.toString().trim()
-        apellido = binding.etSurnameRegister.text.toString().trim()
-        escuela = binding.etSchoolRegister.text.toString().trim()
-        curso = binding.etClassRegister.text.toString().trim()
-        materia = binding.etSubjectRegister.text.toString().trim()
-        rol = binding.spRollRegister.selectedItem.toString().trim()
+        email = binding.etEmail.text.toString().trim()
+        contraseña = binding.etPwd.text.toString().trim()
+        confirmarContraseña = binding.etPwdConfirmar.text.toString().trim()
+        nombre = binding.etNombre.text.toString().trim()
+        apellido = binding.etApellido.text.toString().trim()
       when{
-          TextUtils.isEmpty(contraseña) ->  binding.etPwdConfirm.setError("No puede ser vacía")
-          TextUtils.isEmpty(name) -> binding.etNameRegister.setError("Completar nombre")
-          TextUtils.isEmpty(apellido) -> binding.etSurnameRegister.setError("Completar apellido")
-          !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> binding.etEmailRegister.setError("Email inválido")
-          TextUtils.isEmpty(curso) -> binding.etClassRegister.setError("Completar curso")
-          TextUtils.isEmpty(materia) -> binding.etSubjectRegister.setError("Completar materia")
-          TextUtils.isEmpty(escuela) -> binding.etSchoolRegister.setError("Completar escuela")
-          name.contains(Regex("[^a-zA-Z '-]")) ->  binding.etNameRegister.setError("Solo puede contener letras, espacios, \"-\" y \"'\"")
-          apellido.contains(Regex("[^a-zA-Z '-]")) -> binding.etSurnameRegister.setError("Solo puede contener letras, espacios, \"-\" y \"'\"")
-          !contraseña.contains(Regex("[^a-zA-Z0-9 ]")) -> binding.etPwdRegister.setError("Debe contener al menos un número")
-          !contraseña.contains(Regex("[^a-zA-Z0-9 ]")) -> binding.etPwdRegister.setError("Debe contener al menos un caracter especial")
-          !contraseña.contains(Regex("[A-Z]")) -> binding.etPwdRegister.setError("Debe contener al menos una mayúscula")
-          Regex("^[1-9][A-Z]$") !in curso -> binding.etClassRegister.setError("Debe contener 1 número y 1 letra mayúscula, en ese orden")
-          contraseña.length < 6 -> binding.etPwdRegister.setError("Debe ser mayor a 6 caracteres")
-          contraseña != repetirContraseña -> binding.etPwdConfirm.setError("Las contraseñas no coinciden")
+          TextUtils.isEmpty(contraseña) ->  binding.etPwd.setError("No puede ser vacía")
+          TextUtils.isEmpty(nombre) -> binding.etNombre.setError("Completar nombre")
+          TextUtils.isEmpty(apellido) -> binding.etApellido.setError("Completar apellido")
+          !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> binding.etEmail.setError("Email inválido")
+          nombre.contains(Regex("[^a-zA-Z '-]")) ->  binding.etNombre.setError("Solo puede contener letras, espacios, \"-\" y \"'\"")
+          apellido.contains(Regex("[^a-zA-Z '-]")) -> binding.etApellido.setError("Solo puede contener letras, espacios, \"-\" y \"'\"")
+          !contraseña.contains(Regex("[^a-zA-Z0-9 ]")) -> binding.etPwd.setError("Debe contener al menos un número")
+          !contraseña.contains(Regex("[^a-zA-Z0-9 ]")) -> binding.etPwd.setError("Debe contener al menos un caracter especial")
+          !contraseña.contains(Regex("[A-Z]")) -> binding.etPwd.setError("Debe contener al menos una mayúscula")
+          contraseña.length < 6 -> binding.etPwd.setError("Debe ser mayor a 6 caracteres")
+          contraseña != confirmarContraseña -> binding.etPwdConfirmar.setError("Las contraseñas no coinciden")
           else -> firebaseRegister()
         }
     }
-
     private fun firebaseRegister() {
         progressDialog.show()
         databaseRegister()
@@ -98,21 +78,13 @@ class Registro : AppCompatActivity() {
             }
     }
     private fun databaseRegister() {
-        val email = binding.etEmailRegister.text.toString()
-        val nombre = binding.etNameRegister.text.toString()
-        val apellido = binding.etSurnameRegister.text.toString()
-        val rol = binding.spRollRegister.selectedItem.toString()
-        val escuela = binding.etSchoolRegister.text.toString()
-        val materia = binding.etSubjectRegister.text.toString()
-        val curso = binding.etClassRegister.text.toString()
+        val email = binding.etEmail.text.toString()
+        val nombre = binding.etNombre.text.toString()
+        val apellido = binding.etApellido.text.toString()
         db.collection("usuarios").document(email).set(
             hashMapOf(
                 "nombre" to nombre,
                 "apellido" to apellido,
-                "rol" to rol,
-                "escuela" to escuela,
-                "materia" to materia,
-                "curso" to curso,
             )
         )
         Toast.makeText(this,"Registro exitoso", Toast.LENGTH_LONG).show()

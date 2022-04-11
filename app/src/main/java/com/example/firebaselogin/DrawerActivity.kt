@@ -11,7 +11,6 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.firebaselogin.databinding.ActivityDrawerBinding
 import com.google.android.material.navigation.NavigationView
-import android.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
 
 class DrawerActivity : AppCompatActivity() {

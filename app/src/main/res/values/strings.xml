@@ -33,8 +33,4 @@
     <string name="contacto">Contacto:</string>
     <string name="mail_lautaro">lautaro.negri@gmail.com</string>
     <string name="celular_lautaro">+(54)1133500700</string>
-    <string-array name="lista_roles">
-        <item>Alumno/a</item>
-        <item>Profesor/a</item>
-    </string-array>
 </resources>

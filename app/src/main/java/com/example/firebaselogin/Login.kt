@@ -7,18 +7,12 @@ import android.text.TextUtils
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
-import androidx.core.text.TextUtilsCompat
-import androidx.core.text.trimmedLength
 import com.example.firebaselogin.databinding.ActivityLoginBinding
-import com.example.firebaselogin.databinding.ActivityMainBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
-import org.w3c.dom.Text
-import java.util.regex.Pattern
 class Login : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     private lateinit var actionBar: ActionBar
@@ -42,12 +36,11 @@ class Login : AppCompatActivity() {
         progressDialog.setCanceledOnTouchOutside(false)
         firebaseAuth = FirebaseAuth.getInstance()
         userCheck()
-        binding.btnLoginLogin.setOnClickListener{validacionUser()}
-        binding.etToRegister.setOnClickListener {startActivity(Intent(this, Registro::class.java))}
-        binding.etGoogleLogin.setOnClickListener {iniciarGoogle()}
-        binding.tvForgotPwd.setOnClickListener {startActivity(Intent(this, ForgotPwdActivity::class.java))}
+        binding.btLogin.setOnClickListener{validacionUser()}
+        binding.tvRegistrarse.setOnClickListener {startActivity(Intent(this, Registro::class.java))}
+        binding.tvLoginGoogle.setOnClickListener {iniciarGoogle()}
+        binding.tvOlvidastePwd.setOnClickListener {startActivity(Intent(this, PwdOlvidada::class.java))}
     }
-
     private fun iniciarGoogle() {
         val google = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -57,7 +50,6 @@ class Login : AppCompatActivity() {
             googleClient.signOut()
             startActivityForResult(googleClient.signInIntent, GOOGLE_SIGN)
     }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         progressDialog.show()
@@ -70,7 +62,7 @@ class Login : AppCompatActivity() {
                     firebaseAuth.signInWithCredential(credencial).addOnCompleteListener {
                         if(it.isSuccessful){
                             progressDialog.dismiss()
-                            startActivity(Intent(this, MainActivity::class.java))
+                            startActivity(Intent(this, DrawerActivity::class.java))
                         }else{
                             progressDialog.dismiss()
                             Toast.makeText(this, "Error al iniciar sesión", Toast.LENGTH_SHORT).show()
@@ -83,7 +75,6 @@ class Login : AppCompatActivity() {
             }
         }
     }
-
     private fun validacionUser() {
         email = binding.etEmailLogin.text.toString().trim()
         password = binding.etPwdLogin.text.toString().trim()
@@ -107,7 +98,6 @@ class Login : AppCompatActivity() {
         }
         else{firebaseLogin()}
     }
-
     private fun firebaseLogin() {
         progressDialog.show()
         firebaseAuth.signInWithEmailAndPassword(email, password)
@@ -116,7 +106,7 @@ class Login : AppCompatActivity() {
                 val firebaseUser = firebaseAuth.currentUser
                 var mail = firebaseUser!!.email
                 Toast.makeText(this, "Bienvenido, $mail", Toast.LENGTH_SHORT).show()
-                var intent = Intent(this, MainActivity::class.java)
+                var intent = Intent(this, DrawerActivity::class.java)
                 startActivity(intent)
                 finish()
             }
@@ -126,11 +116,10 @@ class Login : AppCompatActivity() {
                 Toast.makeText(this, "Usuario o contraseña inválidos", Toast.LENGTH_LONG).show()
             }
     }
-
     private fun userCheck() {
         val firebaseUser = firebaseAuth.currentUser
         if (firebaseUser != null){
-            intent = Intent(this, MainActivity::class.java)
+            intent = Intent(this, DrawerActivity::class.java)
             startActivity(intent)
             finish()
         }

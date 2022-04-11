@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ForgotPwdActivity">
+    tools:context=".PwdOlvidada">
 
     <TextView
-        android:id="@+id/tvForgotPwd_FP"
+        android:id="@+id/tvRecuperarPwd"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginTop="52dp"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etEmail_FP"
+        android:id="@+id/etEmailRecuperar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -35,10 +35,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEnterEmail_FP" />
+        app:layout_constraintTop_toBottomOf="@+id/tvIngreseCorreo" />
 
     <TextView
-        android:id="@+id/tvEnterEmail_FP"
+        android:id="@+id/tvIngreseCorreo"
         android:layout_width="210dp"
         android:layout_height="48dp"
         android:layout_marginStart="100dp"
@@ -53,10 +53,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvForgotPwd_FP" />
+        app:layout_constraintTop_toBottomOf="@+id/tvRecuperarPwd" />
 
     <Button
-        android:id="@+id/btSendKey_FP"
+        android:id="@+id/btEnviarCodigo"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="100dp"
@@ -66,5 +66,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail_FP" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmailRecuperar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

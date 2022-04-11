@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".fragments.PerfilFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -18,27 +18,33 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tvWelcome"
+                android:id="@+id/tvBienvenido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="75dp"
                 android:layout_marginTop="45dp"
                 android:layout_marginEnd="75dp"
                 android:text="@string/bienvenido"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/primario"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tvEmailProfile"
+                android:id="@+id/tvEmailUsr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="75dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="75dp"
                 android:text="@string/usuario"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/primario"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/etNameProfile"
+                android:id="@+id/etNombrePerfil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="75dp"
@@ -51,7 +57,7 @@
                 android:minHeight="48dp" />
 
             <EditText
-                android:id="@+id/etSurnameProfile"
+                android:id="@+id/etApellidoPerfil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="75dp"
@@ -63,47 +69,8 @@
                 android:inputType="textPersonName"
                 android:minHeight="48dp" />
 
-            <EditText
-                android:id="@+id/etClassProfile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="75dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="75dp"
-                android:ems="10"
-                android:enabled="false"
-                android:hint="@string/curso"
-                android:inputType="textPersonName"
-                android:minHeight="48dp" />
-
-            <EditText
-                android:id="@+id/etSubjectProfile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="75dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="75dp"
-                android:ems="10"
-                android:enabled="false"
-                android:hint="@string/materia"
-                android:inputType="textPersonName"
-                android:minHeight="48dp" />
-
-            <EditText
-                android:id="@+id/etSchoolProfile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="75dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="75dp"
-                android:ems="10"
-                android:enabled="false"
-                android:hint="@string/escuela"
-                android:inputType="textPersonName"
-                android:minHeight="48dp" />
-
             <Button
-                android:id="@+id/btnEditProfile"
+                android:id="@+id/btEditarPerfil"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="75dp"
@@ -112,7 +79,7 @@
                 android:text="@string/editar_perfil" />
 
             <Button
-                android:id="@+id/btnSaveProfile"
+                android:id="@+id/btGuardarCambios"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="75dp"
@@ -122,7 +89,7 @@
                 android:text="@string/guardar_cambios" />
 
             <Button
-                android:id="@+id/btnPwdChange_Profile"
+                android:id="@+id/btCambiarPwd"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="75dp"
@@ -131,7 +98,7 @@
                 android:text="@string/cambiar_contraseña" />
 
             <Button
-                android:id="@+id/btnDeleteProfile"
+                android:id="@+id/btEliminarCuenta"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="75dp"
@@ -141,7 +108,7 @@
                 android:text="@string/eliminar_cuenta" />
 
             <Button
-                android:id="@+id/btnLogOutProfile"
+                android:id="@+id/btCerrarSesion"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="75dp"

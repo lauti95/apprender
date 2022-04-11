@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.285" />
 
     <Button
-        android:id="@+id/btnLoginLogin"
+        android:id="@+id/btLogin"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="75dp"
@@ -70,7 +70,7 @@
         app:layout_constraintTop_toTopOf="@+id/viewBlanco" />
 
     <TextView
-        android:id="@+id/etToRegister"
+        android:id="@+id/tvRegistrarse"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="75dp"
@@ -85,7 +85,7 @@
         app:layout_constraintTop_toBottomOf="@+id/viewBlanco" />
 
     <TextView
-        android:id="@+id/tvForgotPwd"
+        android:id="@+id/tvOlvidastePwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="75dp"
@@ -101,7 +101,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etPwdLogin" />
 
     <TextView
-        android:id="@+id/etGoogleLogin"
+        android:id="@+id/tvLoginGoogle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="75dp"
@@ -115,6 +115,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etToRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/tvRegistrarse" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

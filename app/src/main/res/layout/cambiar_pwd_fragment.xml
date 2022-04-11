@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChangePwdActivity">
+    tools:context=".fragments.CambiarPwd">
 
     <TextView
-        android:id="@+id/tvChangePwd_CP"
+        android:id="@+id/tvCambiarPwd"
         android:layout_width="229dp"
         android:layout_height="60dp"
         android:layout_marginStart="128dp"
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etCurrentPwd_CP"
+        android:id="@+id/etPwdActual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -36,10 +36,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvChangePwd_CP" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCambiarPwd" />
 
     <EditText
-        android:id="@+id/etNewPwd_CP"
+        android:id="@+id/etPwdNueva"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -51,10 +51,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCurrentPwd_CP" />
+        app:layout_constraintTop_toBottomOf="@+id/etPwdActual" />
 
     <EditText
-        android:id="@+id/etRepeatPwd_CP"
+        android:id="@+id/etPwdNuevaRepetir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -66,16 +66,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNewPwd_CP" />
+        app:layout_constraintTop_toBottomOf="@+id/etPwdNueva" />
 
     <Button
-        android:id="@+id/btnChangePwd_CP"
+        android:id="@+id/btCambiarPwdNueva"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
         android:text="@string/cambiar_contraseña"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etRepeatPwd_CP"
+        app:layout_constraintTop_toBottomOf="@+id/etPwdNuevaRepetir"
         tools:ignore="DuplicateSpeakableTextCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>
