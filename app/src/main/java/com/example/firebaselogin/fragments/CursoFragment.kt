@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.firebaselogin.R
@@ -27,6 +28,11 @@ class CursoFragment: BaseFragment<CursoFragmentBinding>(CursoFragmentBinding::in
             }
             adapter = AdaptadorCurso(dbCurso)
         }
+
+        binding.fbtnCursoNuevo.setOnClickListener{
+            findNavController().navigate(R.id.action_navCurso_to_crearCursoFragment)
+        }
+
     }
 
 

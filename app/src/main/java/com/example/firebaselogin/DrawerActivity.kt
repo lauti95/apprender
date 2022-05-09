@@ -11,7 +11,6 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.firebaselogin.databinding.ActivityDrawerBinding
 import com.google.android.material.navigation.NavigationView
-import androidx.constraintlayout.widget.ConstraintLayout
 
 class DrawerActivity : AppCompatActivity() {
     lateinit var binding : ActivityDrawerBinding
@@ -28,8 +27,8 @@ class DrawerActivity : AppCompatActivity() {
         //Inicialización de toolbar
         setSupportActionBar(binding.appBarMain.myToolbar)
         //Inicialización variables
-        navView = binding.navigationView
         drawerLayout = binding.drawer
+        navView = binding.navigationView
         navController = findNavController(R.id.nav_host_container_view)
         appBarConfiguration = AppBarConfiguration(
             setOf(

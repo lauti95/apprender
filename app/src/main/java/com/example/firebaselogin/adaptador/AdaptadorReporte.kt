@@ -2,6 +2,7 @@ package com.example.firebaselogin.adaptador
 
 import android.view.ViewGroup
 import com.example.firebaselogin.base.BaseAdapter
+import com.example.firebaselogin.databinding.ListaReporteBinding
 import com.example.firebaselogin.modelo.Reporte
 
 class AdaptadorReporte(private val listaReporte: List<Reporte>): BaseAdapter<AdaptadorReporte.ReporteHolder>()  {

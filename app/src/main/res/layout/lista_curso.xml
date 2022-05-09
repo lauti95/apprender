@@ -6,9 +6,10 @@
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cvCursos"
+        android:id="@+id/cvCurso"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:clickable="true"
         android:elevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

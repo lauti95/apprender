@@ -9,7 +9,14 @@
         android:id="@+id/navCurso"
         android:name="com.example.firebaselogin.fragments.CursoFragment"
         android:label="Curso"
-        tools:layout="@layout/curso_fragment" />
+        tools:layout="@layout/curso_fragment" >
+        <action
+            android:id="@+id/action_navCurso_to_crearCursoFragment"
+            app:destination="@id/navCrearCurso" />
+        <action
+            android:id="@+id/action_navCurso_to_navAlumnos"
+            app:destination="@id/navAlumnos" />
+    </fragment>
     <fragment
         android:id="@+id/navReporte"
         android:name="com.example.firebaselogin.fragments.ReporteFragment"
@@ -40,4 +47,14 @@
         android:id="@+id/navLogin"
         android:name="com.example.firebaselogin.Login"
         tools:layout="@layout/activity_login" />
+    <fragment
+        android:id="@+id/navCrearCurso"
+        android:name="com.example.firebaselogin.fragments.CrearCursoFragment"
+        android:label="Crear un curso"
+        tools:layout="@layout/fragment_crear_curso" />
+    <fragment
+        android:id="@+id/navAlumnos"
+        android:name="com.example.firebaselogin.fragments.AlumnosFragment"
+        android:label="Lista de alumnos"
+        tools:layout="@layout/fragment_alumnos" />
 </navigation>

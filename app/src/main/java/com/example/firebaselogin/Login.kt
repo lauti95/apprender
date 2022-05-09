@@ -63,6 +63,7 @@ class Login : AppCompatActivity() {
                         if(it.isSuccessful){
                             progressDialog.dismiss()
                             startActivity(Intent(this, DrawerActivity::class.java))
+                            finish()
                         }else{
                             progressDialog.dismiss()
                             Toast.makeText(this, "Error al iniciar sesión", Toast.LENGTH_SHORT).show()

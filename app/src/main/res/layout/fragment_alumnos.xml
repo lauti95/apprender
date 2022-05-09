@@ -4,30 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".fragments.ReporteFragment">
+    tools:context=".fragments.AlumnosFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvListasReporte"
+        android:id="@+id/rvListasAlumnos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:listitem="@layout/lista_reporte" />
+        tools:listitem="@layout/lista_alumnos">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fbReporte"
-        android:layout_width="0dp"
-        android:layout_height="61dp"
-        android:layout_marginEnd="8dp"
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/cardview_dark_background"
+        android:backgroundTint="#F44336"
         android:clickable="true"
-        android:src="@drawable/aula"
+        android:src="@android:drawable/ic_menu_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.932"
-        app:layout_constraintStart_toStartOf="parent"
-        app:maxImageSize="50dp"
-        app:useCompatPadding="false"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

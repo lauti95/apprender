@@ -33,4 +33,6 @@
     <string name="contacto">Contacto:</string>
     <string name="mail_lautaro">lautaro.negri@gmail.com</string>
     <string name="celular_lautaro">+(54)1133500700</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
