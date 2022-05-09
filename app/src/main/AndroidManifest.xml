@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.firebaselogin">
+    <permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -11,27 +12,25 @@
         android:theme="@style/Theme.FirebaseLogin">
         <activity
             android:name=".DrawerActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.FirebaseLogin.NoActionBar"/>
         <activity
             android:name=".PwdOlvidada"
             android:exported="false" />
         <activity
             android:name=".Splash"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"/>
         <activity
             android:name=".Registro"
             android:exported="false" />
         <activity
             android:name=".Login"
-            android:exported="false"/>
-        <!--<activity
-            android:name=".MainActivity"
-            android:exported="false" />-->
+            android:exported="true">
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
     </application>
 
 </manifest>

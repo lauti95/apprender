@@ -41,9 +41,6 @@ class DrawerActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
     }
 
-    private fun setSupportActionBar(myToolbar: ConstraintLayout) {
-        TODO("Not yet implemented")
-    }
 
     override fun onSupportNavigateUp(): Boolean {
        val navController = findNavController(R.id.nav_host_container_view)

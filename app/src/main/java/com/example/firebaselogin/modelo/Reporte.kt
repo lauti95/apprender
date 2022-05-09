@@ -1,4 +1,11 @@
 package com.example.firebaselogin.modelo
 
-class Reporte {
-}
+data class Reporte(
+
+    val nombre: String,
+    val notaPrimerCuatrimestre: Int,
+    val notaSegundoCuatrimestre: Int,
+    val notaTercerCuatrimestre: Int,
+    val notaCuartoCuatrimestre: Int,
+
+    )

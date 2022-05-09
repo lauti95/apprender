@@ -17,6 +17,10 @@
         //Splash theme
     <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/white</item>
-        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="Theme.FirebaseLogin.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 </resources>

@@ -15,7 +15,7 @@
       "oauth_client": [
         {
           "client_id": "909786629333-ipn6a5o3rn81677h29sqq9njkk9nr28d.apps.googleusercontent.com",
-          "client_type": 1,
+          "client_type": 3,
           "android_info": {
             "package_name": "com.example.firebaselogin",
             "certificate_hash": "c46baaa841778195793a456e7230b6a84337abc0"
