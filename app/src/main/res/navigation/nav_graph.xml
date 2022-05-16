@@ -56,5 +56,21 @@
         android:id="@+id/navAlumnos"
         android:name="com.example.firebaselogin.fragments.AlumnosFragment"
         android:label="Lista de alumnos"
-        tools:layout="@layout/fragment_alumnos" />
+        tools:layout="@layout/fragment_alumnos" >
+        <action
+            android:id="@+id/action_navAlumnos_to_nuevoAlumnoFragment"
+            app:destination="@id/navNuevoAlumno" />
+        <action
+            android:id="@+id/action_navAlumnos_to_detallesAlumnoFragment"
+            app:destination="@id/navDetallesAlumno" />
+    </fragment>
+    <fragment
+        android:id="@+id/navNuevoAlumno"
+        android:name="com.example.firebaselogin.fragments.NuevoAlumnoFragment"
+        android:label="Crear un nuevo alumno" />
+    <fragment
+        android:id="@+id/navDetallesAlumno"
+        android:name="com.example.firebaselogin.fragments.DetallesAlumnoFragment"
+        android:label="Detalles del alumno"
+        tools:layout="@layout/fragment_detalles_alumno" />
 </navigation>

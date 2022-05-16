@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -32,14 +33,21 @@ android {
     }
 
     buildFeatures { viewBinding true}
+    namespace 'com.example.firebaselogin'
 }
 
 dependencies {
 
+    //Libreria Room
+    implementation("androidx.room:room-runtime:2.4.2")
+    kapt("androidx.room:room-compiler:2.4.2")
+
 //Navigation:
     implementation("androidx.navigation:navigation-fragment-ktx:2.4.1")
     implementation("androidx.navigation:navigation-ui-ktx:2.4.1")
-
+//Libreria Picasso para img
+    implementation 'com.squareup.picasso:picasso:2.8'
+//Otras
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.3.0'
     implementation 'com.google.android.material:material:1.4.0'
